@@ -1,4 +1,4 @@
-//Software para recebimento de dados via LORA com o TTGO ESP32
+//Software para recepção de dados via LORA com o TTGO ESP32
 //Dados recebidos: Latitude, Longitude, Temperatura, Pressão e Altitude
 //Data de modificação: 20/12/2022
 
@@ -23,7 +23,7 @@ int pacote = 1;
 
 String data;
 void onReceive(int packetSize) {
-  Serial.println("Packet recebido");
+  Serial.println("Pacote recebido");
 
   
   if (packetSize) {
@@ -51,7 +51,7 @@ void initLoRa() {
 }
 void setup() {
   Serial.begin(9600);
-  Serial.println("Configurando LoRa Sender...");
+  Serial.println("Configurando LoRa Reciever...");
   initLoRa();
 }
 void loop() {
